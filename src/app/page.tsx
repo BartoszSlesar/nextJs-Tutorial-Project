@@ -1,95 +1,41 @@
-import Image from "next/image";
-import styles from "./page.module.css";
+import { Alert } from "@/app/components/bootstrap";
 
 export default function Home() {
   return (
-    <main className={styles.main}>
-      <div className={styles.description}>
+    <div>
+      <Alert>
         <p>
-          Get started by editing&nbsp;
-          <code className={styles.code}>src/app/page.tsx</code>
+          This is a sample project to showcase and learn the new{" "}
+          <strong>NextJS 13 app directory</strong> and its features, including:
         </p>
-        <div>
-          <a
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{" "}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className={styles.vercelLogo}
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
-        </div>
-      </div>
-
-      <div className={styles.center}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
-
-      <div className={styles.grid}>
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Docs <span>-&gt;</span>
-          </h2>
-          <p>Find in-depth information about Next.js features and API.</p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Learn <span>-&gt;</span>
-          </h2>
-          <p>Learn about Next.js in an interactive course with&nbsp;quizzes!</p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Templates <span>-&gt;</span>
-          </h2>
-          <p>Explore starter templates for Next.js.</p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Deploy <span>-&gt;</span>
-          </h2>
-          <p>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
+        <ul>
+          <li>static and dynamic server-side rendering</li>
+          <li>incremental static regeneration</li>
+          <li>client-side rendering</li>
+          <li>route handlers (API endpoints)</li>
+          <li>meta-data API</li>
+          <li>and more</li>
+        </ul>
+        <p className="mb-0">
+          Every page uses a different approach to{" "}
+          <strong>fetching and caching data</strong>. Click the links in the nav
+          bar to try them out.
+        </p>
+      </Alert>
+      <Alert variant="secondary">
+        <p>
+          Note: In order to load the data on this site, you need to get a{" "}
+          <a href="https://unsplash.com/developers">
+            free API key from Unsplash
+          </a>{" "}
+          and add it to your <code>.env.local</code> file as{" "}
+          <code>UNSPLASH_ACCESS_KEY</code>.
+        </p>
+        <p className="mb-0">
+          Unsplash has a free quota of 50 requests per hour so you might start
+          getting errors if you try too often.
+        </p>
+      </Alert>
+    </div>
   );
 }
